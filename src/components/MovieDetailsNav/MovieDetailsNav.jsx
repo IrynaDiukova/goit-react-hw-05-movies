@@ -1,20 +1,21 @@
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
-import { List } from './MovieDetailsNav.styled';
+
+import { List, Li, NavLink } from './MovieDetailsNav.styled';
+
 
 const MovieDetailsNav = ({ from }) => {
   return (
     <List>
-      <li>
-        <Link to={`cast`} state={{ from }}>
+      <Li>
+        <NavLink to={`cast`} state={{ from }}>
           Cast
-        </Link>
-      </li>
-      <li>
-        <Link to={`reviews`} state={{ from }}>
+        </NavLink>
+      </Li>
+      <Li>
+        <NavLink to={`reviews`} state={{ from }}>
           Reviews
-        </Link>
-      </li>
+        </NavLink>
+      </Li>
     </List>
   );
 };

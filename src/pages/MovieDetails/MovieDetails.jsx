@@ -5,6 +5,7 @@ import moviesAPI from 'services/api-servises';
 import Poster from 'components/Poster/Poster';
 import GenresList from 'components/GenresList/GenresList';
 import MovieDetailsNav from '../../components/MovieDetailsNav/MovieDetailsNav';
+import { Div, Button } from './MovieDetails.styled';
 
 const MovieDetails = () => {
   const navigate = useNavigate();
@@ -42,7 +43,7 @@ const MovieDetails = () => {
 
   return (
     <>
-      <button onClick={handleBackClick}>&larr; Go back</button>
+      <Button onClick={handleBackClick}>&larr; Go back</Button>
 
       <Box display="flex" mt={3} alignItems="flex-start">
         <Poster src={poster_path} width={250} alt={original_title} />
@@ -74,8 +75,10 @@ const MovieDetails = () => {
         borderTop="2px solid"
         borderBottom="2px solid"
       >
-        <Box as="p">Additional information</Box>
-        <MovieDetailsNav from={backLinkHref} />
+        <Div>
+          <Box as="p" font-size="30" font-weight="500">Additional information</Box>
+          <MovieDetailsNav from={backLinkHref} />
+        </Div>
       </Box>
 
       <Suspense fallback={<div>Loading subpage...</div>}>

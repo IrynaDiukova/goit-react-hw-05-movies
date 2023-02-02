@@ -1,6 +1,6 @@
 import { Box } from 'components/Box';
-import { NavItem } from './Header.styled';
-import { Headers } from './Header.styled';
+import { NavItem, Headers } from './Header.styled';
+
 
 const navItems = [
   { href: '/', text: 'Home' },
